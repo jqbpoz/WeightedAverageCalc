@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/index.b2d9cf43.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>My First Parcel App</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div class="header__text">weighted average calculator</div>
+      </div>
+      <div class="data__container">
+        <div class="data">
+          <div class="data__row">
+            <div class="data__number"></div>
+            <div class="data__text">Value</div>
+            <div class="data__text">Weight</div>
+          </div>
+          <div class="data__row">
+            <div class="data__number">1</div>
+            <input type="text" data-id="1" class="data__value data__input">
+            <input type="text" data-id="2" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number">2</div>
+            <input type="text" data-id="3" class="data__value data__input">
+            <input type="text" data-id="4" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number">3</div>
+            <input type="text" data-id="5" class="data__value data__input">
+            <input type="text" data-id="6" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number">4</div>
+            <input type="text" data-id="7" class="data__value data__input">
+            <input type="text" data-id="8" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number">5</div>
+            <input type="text" data-id="9" class="data__value data__input">
+            <input type="text" data-id="10" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number">6</div>
+            <input type="text" data-id="11" class="data__value data__input">
+            <input type="text" data-id="12" class="data__weight data__input">
+          </div>
+          <div class="data__row">
+            <div class="data__number"></div>
+            <button id="add" class="data__btn">Add row</button>
+            <button id="submit" class="data__btn">Submit</button>
+          </div>
+          <div class="data__row">
+            <div class="data__number"></div>
+            <button id="delete" class="data__btn">Delete row</button>
+            <button id="clear" class="data__btn">Clear all</button>
+          </div>
+        </div>
+        <div class="result">
+          <div class="result__window">230</div>
+        </div>
+      </div>
+      <div class="chart">
+        <canvas class="chart__canvas"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/index.f5c48570.js" defer=""></script>
+  </body>
+</html>

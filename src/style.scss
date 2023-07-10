@@ -1,0 +1,138 @@
+$color--primary: #ff9721;
+$color-gray--1: #eee;
+$color-gray--2: #fff;
+////#2a05b0
+@mixin input__style {
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  font-size: inherit;
+  width: 30%;
+  border: solid rgba($color: #000000, $alpha: 0.4);
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  color: black;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: $color-gray--1;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 5rem;
+  color: $color-gray--1;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  width: 100%;
+  font-size: 3rem;
+  background-color: $color--primary;
+  &__text {
+    width: 80%;
+  }
+}
+.data__container {
+  width: 80%;
+  display: flex;
+  // flex-direction: column;
+  margin: 2rem 0;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-gray--1;
+  font-size: 2rem;
+  width: 70%;
+  &__row {
+    margin: 0 5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    position: relative;
+  }
+  &__row:first-child {
+    padding-bottom: 2rem;
+  }
+  &__row:first-child {
+    border-bottom: solid rgba($color: #000000, $alpha: 0.4);
+  }
+  &__row *:nth-child(2) {
+    margin-right: 2rem;
+  }
+  &__text {
+    width: 30%;
+    text-align: center;
+  }
+  &__input {
+    @include input__style();
+    text-align: center;
+    &:focus {
+      outline: none;
+      border: 2px solid $color--primary;
+    }
+  }
+  &__btn {
+    @include input__style();
+    background-color: $color--primary;
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+  &__number {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.4rem;
+  }
+}
+.result {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 12rem;
+  color: $color--primary;
+  margin: 4rem 4rem 0 0;
+}
+.chart {
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  &__canvas {
+    width: 100%;
+  }
+}
